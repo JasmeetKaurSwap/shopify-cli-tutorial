@@ -19,19 +19,9 @@
         <input type="radio" id="{{ option_3 | handle }}" name="{{ title | handle }}" value="{{ option_3 }}">
         <label for="{{ option_3 | handle }} ">{{ option_3 }}</label>
 <br>
-    {% assign h = 00 %}
-        <h1>{% increment h %}</h1>
-    <h1>{{ h }}</h1>
-    {% assign h = h | plus: 1 %}
-        <h1> {{ h }}</h1>
-        <h1>{% increment h %}</h1>
-        
-        {%- assign a1 = a | plus: 1 -%}{{ a1 }}{{ b }}{{ c }}
-        {{ a }}{%- assign b1 = b | plus: 1 -%}{{ b1 }}{{ c }}
-        {{ a }}{{ b }}{%- assign c1 = c | plus: 1 -%}{{ c1 }}
         <select name="{{ title | handle }}" class="selector-hidden">
           <option data-value="000000" value="" selected></option>
-          <option data-value="{%- assign a1 = a | plus: 1 -%}--{{ a1 }}{{ b }}{{ c }}" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
+          <option data-value="{%- assign a1 = a | plus: 1 -%}{% if a1 <= 9 %}{{ a1 | prepend: 0 }}{% else %}{{ a1 }}{% endif %}{{ b }}{{ c }}" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
           <option data-value="{{ a }}{%- assign b1 = b | plus: 1 -%}{{ b1 }}{{ c }}" value="{{ option_2 }}" >{{ option_2 }}</option>
           <option data-value="{{ a }}{{ b }}{%- assign c1 = c | plus: 1 -%}{{ c1 }}" value="{{ option_3 }}" >{{ option_3 }}</option>
         </select>
