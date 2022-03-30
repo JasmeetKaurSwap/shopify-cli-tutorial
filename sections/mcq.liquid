@@ -1,7 +1,66 @@
+<section>
+  <div>
+    {%- assign a = 00 -%}
+    {%- assign b = 00 -%}
+    {%- assign c = 00 -%}
+    {% for block in section.blocks %}
+
+    <div class="questionanswer-1">
+	<h3>How would you generally describe your body frame?</h3>
+	<div class="inputSelector">
+		<input type="radio" id="long-and-lean" name="body_frame" value="long and lean">
+		<label for="long and lean">long and lean</label><br>
+		<input type="radio" id="moderate " name="body_frame" value="moderate">
+		<label for="moderate ">moderate</label><br>
+		<input type="radio" id="large" name="body_frame" value="large">
+		<label for="large ">Large</label>
+
+		<select name="body_frame" class="selector-hidden">
+			<option data-value="000000" value="" selected></option>
+			<option data-value="010000" value="long and lean" >long and lean</option>
+			<option data-value="000100" value="moderate" >moderate</option>
+			<option data-value="000001" value="large" >Large</option>
+		</select>
+	</div>
+      {% endfor %}
+</div>
+  </div>
+</section>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "MCQ",
+    "class": "spaced-section spaced-section--full-width mcq-section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "mcq",
+        "name": "MCQ",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "default": "Question",
+            "label": "Question"
+          },
+          {
+            "type": "text",
+            "id": "option_1",
+            "label": "Option 1"
+          },
+          {
+            "type": "text",
+            "id": "option_2",
+            "label": "Option 2"
+          },
+          {
+            "type": "text",
+            "id": "option_3",
+            "label": "Option 3"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
 
