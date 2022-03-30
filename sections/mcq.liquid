@@ -106,8 +106,8 @@
       alert('add'+add);
       alert('oldcounter'+oldcounter);
       alert('sum'+sum);
-      if (sum.length < 6){
-        insert(sum,'0')
+      if (sum.toString().length < 6){
+    //    insert(sum,'0')
         $('.counter').text(sum.prepend('0'));
       }else{
         $('.counter').text(sum);
