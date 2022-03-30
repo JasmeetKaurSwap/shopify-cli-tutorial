@@ -4,9 +4,59 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "16486264939ae2bc86": {
+      "type": "mcq",
+      "blocks": {
+        "1648626493d82b4f3e-0": {
+          "type": "mcq",
+          "settings": {
+            "title": "How would you generally describe your body frame?",
+            "option_1": "Long and lean",
+            "option_2": "Moderate",
+            "option_3": "Large"
+          }
+        },
+        "1648626493d82b4f3e-1": {
+          "type": "mcq",
+          "settings": {
+            "title": "What is the pattern of weight fluctuation?",
+            "option_1": "Tends to lose weight easily, difficult to gain",
+            "option_2": "Easy to gain weight and lose weight",
+            "option_3": "Gain weight easily but Difficult to lose weight"
+          }
+        },
+        "1648626493d82b4f3e-2": {
+          "type": "mcq",
+          "settings": {
+            "title": "What is your complexion? (If you are exposed to sun on a regular basis, kindly mention the complexion based on appearance in the unexposed areas like legs\/thighs\/inside of the arms\/etc)",
+            "option_1": "Dark, dusky",
+            "option_2": "Fair and rosy, copper",
+            "option_3": "Fair and pale"
+          }
+        },
+        "6243ebac-c5e4-46a4-87b7-ce30fe5714b5": {
+          "type": "mcq",
+          "settings": {
+            "title": "How does your skin feel immideately after bath?",
+            "option_1": "Dry, rough, thin",
+            "option_2": "Smooth and oily",
+            "option_3": "Oily, thic"
+          }
+        }
+      },
+      "block_order": [
+        "1648626493d82b4f3e-0",
+        "1648626493d82b4f3e-1",
+        "1648626493d82b4f3e-2",
+        "6243ebac-c5e4-46a4-87b7-ce30fe5714b5"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16486264939ae2bc86"
   ]
 }
