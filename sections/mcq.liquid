@@ -18,7 +18,11 @@
         <label for="{{ option_2 | handle }} ">{{ option_2 }}</label><br>
         <input type="radio" id="{{ option_3 | handle }}" name="{{ title | handle }}" value="{{ option_3 }}">
         <label for="{{ option_3 | handle }} ">{{ option_3 }}</label>
-<br>
+<br
+    {% assign h = 00 %}
+    {{ h }}
+    {% assign h = h | plus: 1 %}
+    {{ h }}
         
         {%- assign a1 = a | plus: 1 -%}{{ a1 }}{{ b }}{{ c }}
         {{ a }}{%- assign b1 = b | plus: 1 -%}{{ b1 }}{{ c }}
