@@ -9,9 +9,6 @@
     {% assign option_2 = block.settings.option_2 %}
     {% assign option_3 = block.settings.option_3 %}
 {% if title != blank and option_1 != blank and option_2 != blank and option_3 != blank %}
-    {%- assign a = 00 | plus: 1 -%}
-    {%- assign b = 00 | plus: 1 -%}
-    {%- assign c = 00 | plus: 1 -%}
     <div class="questionanswer-1">
       <h3>{{ title }}</h3>
       <div class="inputSelector">
@@ -22,11 +19,11 @@
         <input type="radio" id="{{ option_3 | handle }}" name="{{ title | handle }}" value="{{ option_3 }}">
         <label for="{{ option_3 | handle }} ">{{ option_3 }}</label>
 
-        <select name="body_frame" class="selector-hidden">
+        <select name="{{ title | handle }}" class="selector-hidden">
           <option data-value="000000" value="" selected></option>
-          <option data-value="010000" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
-          <option data-value="000100" value="{{ option_2 }}" >{{ option_2 }}</option>
-          <option data-value="000001" value="{{ option_3 }}" >{{ option_3 }}</option>
+          <option data-value="{%- assign a = a | plus: 1 -%}{{ b }}{{ c }}" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
+          <option data-value="{{ a }}{%- assign b = b | plus: 1 -%}{{ c }}" value="{{ option_2 }}" >{{ option_2 }}</option>
+          <option data-value="{{ a }}{{ b }}{%- assign c = c | plus: 1 -%}" value="{{ option_3 }}" >{{ option_3 }}</option>
         </select>
       </div>
       
