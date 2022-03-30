@@ -100,7 +100,7 @@
       var valueAttribute = '[value="' + _this.val() + '"]';
       _thisparent.find('.selector-hidden option' + valueAttribute).prop('selected', true);
       _thisparent.find('input' + valueAttribute).prop('checked', true);
-      var add = parseInt(_this.attr('data-value'));
+      var add = parseInt(_thisparent.find('.selector-hidden option' + valueAttribute).attr('data-value'));
       var oldcounter = parseInt($('.counter').text());
       var sum = add + oldcounter;
       alert('add'+add);
