@@ -21,17 +21,15 @@
 <br>
         <select name="{{ title | handle }}" class="selector-hidden">
           <option data-value="000000" value="" selected></option>
-          <option data-value="a" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
-          <option data-value="b" value="{{ option_2 }}" >{{ option_2 }}</option>
-          <option data-value="{{ a }}--{{ b }}--{%- assign c1 = c | plus: 1 -%}{% if c1 <= 9 %}{{ c1 | prepend: 0 }}{% else %}{{ c1 }}{% endif %}" value="{{ option_3 }}" >{{ option_3 }}</option>
+          <option data-value="000000" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
+          <option data-value="000000" value="{{ option_2 }}" >{{ option_2 }}</option>
+          <option data-value="000000" value="{{ option_3 }}" >{{ option_3 }}</option>
         </select>
       </div>
     </div>
     {% endif %}
     {% endfor %}
     <div class="counter"><span class="a">{{ a }}</span><span class="b">{{ b }}</span><span class="c">{{ c }}</span></div>
-    {%- assign d1 = c | plus: 01 -%}
-    {{ d1 }}
   </div>
 </section>
 
