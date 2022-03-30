@@ -4,26 +4,35 @@
     {%- assign b = 00 -%}
     {%- assign c = 00 -%}
     {% for block in section.blocks %}
-
+    {% assign title = block.settings.title %}
+    {% assign option_1 = block.settings.option_1 %}
+    {% assign option_2 = block.settings.option_2 %}
+    {% assign option_3 = block.settings.option_3 %}
+{% if title != blank and option_1 != blank and option_2 != blank and option_3 != blank %}
+    {%- assign a = 00 | plus: 1 -%}
+    {%- assign b = 00 | plus: 1 -%}
+    {%- assign c = 00 | plus: 1 -%}
     <div class="questionanswer-1">
-	<h3>How would you generally describe your body frame?</h3>
-	<div class="inputSelector">
-		<input type="radio" id="long-and-lean" name="body_frame" value="long and lean">
-		<label for="long and lean">long and lean</label><br>
-		<input type="radio" id="moderate " name="body_frame" value="moderate">
-		<label for="moderate ">moderate</label><br>
-		<input type="radio" id="large" name="body_frame" value="large">
-		<label for="large ">Large</label>
+      <h3>{{ title }}</h3>
+      <div class="inputSelector">
+        <input type="radio" id="{{ option_1 | handle }}" name="{{ title | handle }}" value="{{ option_1 }}">
+        <label for="{{ option_1 | handle }}">{{ option_1 }}</label><br>
+        <input type="radio" id="{{ option_2 | handle }} " name="{{ title | handle }}" value="{{ option_2 }}">
+        <label for="{{ option_2 | handle }} ">{{ option_2 }}</label><br>
+        <input type="radio" id="{{ option_3 | handle }}" name="{{ title | handle }}" value="{{ option_3 }}">
+        <label for="{{ option_3 | handle }} ">{{ option_3 }}</label>
 
-		<select name="body_frame" class="selector-hidden">
-			<option data-value="000000" value="" selected></option>
-			<option data-value="010000" value="long and lean" >long and lean</option>
-			<option data-value="000100" value="moderate" >moderate</option>
-			<option data-value="000001" value="large" >Large</option>
-		</select>
-	</div>
-      {% endfor %}
-</div>
+        <select name="body_frame" class="selector-hidden">
+          <option data-value="000000" value="" selected></option>
+          <option data-value="010000" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
+          <option data-value="000100" value="{{ option_2 }}" >{{ option_2 }}</option>
+          <option data-value="000001" value="{{ option_3 }}" >{{ option_3 }}</option>
+        </select>
+      </div>
+      
+    </div>
+    {% endif %}
+    {% endfor %}
   </div>
 </section>
 
