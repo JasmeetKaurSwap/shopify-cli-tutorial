@@ -103,7 +103,11 @@
       var add = parseInt(_this.attr('data-value'));
       var oldcounter = parseInt($('.counter').text());
       var sum = add + oldcounter;
-      if sum.length < 6 ? $('.counter').text(sum.prepend('0')) : $('.counter').text(sum) ;
+      if (sum.length < 6){
+        $('.counter').text(sum.prepend('0'));
+      }else{
+        $('.counter').text(sum);
+      }
 
     });
   });
