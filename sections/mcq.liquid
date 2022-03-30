@@ -20,9 +20,11 @@
         <label for="{{ option_3 | handle }} ">{{ option_3 }}</label>
 <br>
     {% assign h = 00 %}
+        <h1>{% increment h %}</h1>
     <h1>{{ h }}</h1>
     {% assign h = h | plus: 1 %}
         <h1> {{ h }}</h1>
+        <h1>{% increment h %}</h1>
         
         {%- assign a1 = a | plus: 1 -%}{{ a1 }}{{ b }}{{ c }}
         {{ a }}{%- assign b1 = b | plus: 1 -%}{{ b1 }}{{ c }}
