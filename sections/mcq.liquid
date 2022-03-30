@@ -31,7 +31,7 @@
         {{ a }}{{ b }}{%- assign c1 = c | plus: 1 -%}{{ c1 }}
         <select name="{{ title | handle }}" class="selector-hidden">
           <option data-value="000000" value="" selected></option>
-          <option data-value="{%- assign a1 = a | plus: 1 -%}{{ a1 }}{{ b }}{{ c }}" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
+          <option data-value="{%- assign a1 = a | plus: 1 -%}--{{ a1 }}{{ b }}{{ c }}" value="{{ block.settings.option_1 }}" >{{ block.settings.option_1 }}</option>
           <option data-value="{{ a }}{%- assign b1 = b | plus: 1 -%}{{ b1 }}{{ c }}" value="{{ option_2 }}" >{{ option_2 }}</option>
           <option data-value="{{ a }}{{ b }}{%- assign c1 = c | plus: 1 -%}{{ c1 }}" value="{{ option_3 }}" >{{ option_3 }}</option>
         </select>
