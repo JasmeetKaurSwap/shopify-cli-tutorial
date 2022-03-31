@@ -97,6 +97,33 @@
             "option_2": "Easy to fall asleep and wake-up",
             "option_3": "Deep, prolonged"
           }
+        },
+        "15822fb1-acca-4d7c-a751-f7881c832288": {
+          "type": "mcq",
+          "settings": {
+            "title": "How is the bowel movement?",
+            "option_1": "Often constipated, gaseous, irregular bowel habits",
+            "option_2": "Frequent loose stools, regular bowel habit",
+            "option_3": "Bulky, dense faecal matter"
+          }
+        },
+        "84234ab8-16ec-4317-bbfe-7cddd94ccee0": {
+          "type": "mcq",
+          "settings": {
+            "title": "How tolerant are you about weather conditons?",
+            "option_1": "Inlerance to cold and windy weather",
+            "option_2": "Intolerance to warm\/hot conditions",
+            "option_3": "Intolerance to cold and damp conditions"
+          }
+        },
+        "04cef556-f706-4790-9c5c-6b9a5fcc8576": {
+          "type": "mcq",
+          "settings": {
+            "title": "How often do you sweat, and how much do you sweat?",
+            "option_1": "Less to almost nill",
+            "option_2": "Excessive with foul odour",
+            "option_3": "Odourless, less in quantity"
+          }
         }
       },
       "block_order": [
@@ -109,7 +136,10 @@
         "85baf6e9-38fd-4059-8648-e99b052c67cd",
         "4296f674-3e0a-495f-a5a6-a83510fc14af",
         "8d956388-a94c-4035-aa00-25d950468a60",
-        "fa410037-1ca8-439d-ae93-4d74c793f246"
+        "fa410037-1ca8-439d-ae93-4d74c793f246",
+        "15822fb1-acca-4d7c-a751-f7881c832288",
+        "84234ab8-16ec-4317-bbfe-7cddd94ccee0",
+        "04cef556-f706-4790-9c5c-6b9a5fcc8576"
       ],
       "settings": {
       }
