@@ -29,7 +29,7 @@
     </div>
     {% endif %}
     {% endfor %}
-    <div class="counter">000000</div>
+    <h1 class="counter">000000</h1>
   </div>
 </section>
 
@@ -103,9 +103,9 @@
       var add = parseInt(_thisparent.find('.selector-hidden option' + valueAttribute).attr('data-value'));
       var oldcounter = parseInt($('.counter').text());
       var sum = add + oldcounter;
-      alert('add'+add);
-      alert('oldcounter'+oldcounter);
-      alert('sum'+sum);
+    //  alert('add'+add);
+   //   alert('oldcounter'+oldcounter);
+   //   alert('sum'+sum);
       if (sum.toString().length < 6){
     //    insert(sum,'0')
         if(sum.toString().length == 5){
