@@ -9,7 +9,7 @@
     {% assign option_2 = block.settings.option_2 %}
     {% assign option_3 = block.settings.option_3 %}
 {% if title != blank and option_1 != blank and option_2 != blank and option_3 != blank %}
-    <div class="questionanswer-{{ forloop.index }}">
+    <div class="questionanswer-{{ forloop.index }}" {% unless forloop.first %}style="display:none;"{% endunless %}>
       <h3>{{ title }}</h3>
       <div class="inputSelector">
         <input type="radio" id="{{ option_1 | handle }}" name="{{ title | handle }}" value="{{ option_1 }}">
