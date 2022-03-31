@@ -26,7 +26,7 @@
           <option data-value="000001" value="{{ option_3 }}" >{{ option_3 }}</option>
         </select>
       </div>
-      <div class="">Next</div>
+      <div class="" data-next="questionanswer-{{ forloop.ndex | plus: 1 }}">Next</div>
     </div>
     {% endif %}
     {% endfor %}
