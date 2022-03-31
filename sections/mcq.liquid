@@ -109,15 +109,15 @@
       if (sum.toString().length < 6){
     //    insert(sum,'0')
         if(sum.toString().length == 5){
-          $('.counter').text(sum.prepend('0'));
+          $('.counter').text(sum.toString().prepend('0'));
         }else if(sum.toString().length == 4){
-          $('.counter').text(sum.prepend('00'));
+          $('.counter').text(sum.toString().prepend('00'));
         }else if(sum.toString().length == 3){
-          $('.counter').text(sum.prepend('000'));
+          $('.counter').text(sum.toString().prepend('000'));
         }else if(sum.toString().length == 2){
-          $('.counter').text(sum.prepend('0000'));
+          $('.counter').text(sum.toString().prepend('0000'));
         }else if(sum.toString().length == 1){
-          $('.counter').text(sum.prepend('00000'));
+          $('.counter').text(sum.toString().prepend('00000'));
         }
       }else{
         $('.counter').text(sum);
