@@ -15,9 +15,9 @@
         <input type="radio" id="{{ option_1 | handle }}" name="{{ title | handle }}" value="{{ option_1 }}">
         <label for="{{ option_1 | handle }}">{{ option_1 }}</label><br>
         <input type="radio" id="{{ option_2 | handle }} " name="{{ title | handle }}" value="{{ option_2 }}">
-        <label for="{{ option_2 | handle }} ">{{ option_2 }}</label><br>
+        <label for="{{ option_2 | handle }}">{{ option_2 }}</label><br>
         <input type="radio" id="{{ option_3 | handle }}" name="{{ title | handle }}" value="{{ option_3 }}">
-        <label for="{{ option_3 | handle }} ">{{ option_3 }}</label>
+        <label for="{{ option_3 | handle }}">{{ option_3 }}</label>
 <br>
         <select name="{{ title | handle }}" class="selector-hidden">
           <option data-value="000000" value="" selected></option>
@@ -101,10 +101,12 @@
 <script>
   window.addEventListener('DOMContentLoaded', function(){
     $('.next-question').click(function(){
+      if($(this).parent().find('select')){
       var nextlink = $(this).attr('data-next');
       var currentlink = $(this).attr('data-current');
       $('.'+currentlink).css('display','none');
       $('.'+nextlink).css('display','block');
+      }
     });
     
     
