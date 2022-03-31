@@ -83,10 +83,10 @@
         "8d956388-a94c-4035-aa00-25d950468a60": {
           "type": "mcq",
           "settings": {
-            "title": "Question",
-            "option_1": "",
-            "option_2": "",
-            "option_3": ""
+            "title": "Is it easy for you to digest the consumed food?",
+            "option_1": "Feels bloated often, complaints of gas",
+            "option_2": "Food gets digested well, tendency to develop acidity",
+            "option_3": "Slow digestion, feeling of heavyness"
           }
         }
       },
