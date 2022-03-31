@@ -88,6 +88,15 @@
             "option_2": "Food gets digested well, tendency to develop acidity",
             "option_3": "Slow digestion, feeling of heavyness"
           }
+        },
+        "fa410037-1ca8-439d-ae93-4d74c793f246": {
+          "type": "mcq",
+          "settings": {
+            "title": "How is your sleep?",
+            "option_1": "Scanty, disturbed",
+            "option_2": "Easy to fall asleep and wake-up",
+            "option_3": "Deep, prolonged"
+          }
         }
       },
       "block_order": [
@@ -99,7 +108,8 @@
         "bdd52077-81a5-45c0-9a5e-5e24b542f662",
         "85baf6e9-38fd-4059-8648-e99b052c67cd",
         "4296f674-3e0a-495f-a5a6-a83510fc14af",
-        "8d956388-a94c-4035-aa00-25d950468a60"
+        "8d956388-a94c-4035-aa00-25d950468a60",
+        "fa410037-1ca8-439d-ae93-4d74c793f246"
       ],
       "settings": {
       }
