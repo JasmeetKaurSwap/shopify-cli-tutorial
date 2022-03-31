@@ -101,7 +101,7 @@
 <script>
   window.addEventListener('DOMContentLoaded', function(){
     $('.next-question').click(function(){
-      if($(this).parent().find('select')){
+      if($(this).parent().find('select').val() != ''){
       var nextlink = $(this).attr('data-next');
       var currentlink = $(this).attr('data-current');
       $('.'+currentlink).css('display','none');
