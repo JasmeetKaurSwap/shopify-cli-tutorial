@@ -107,21 +107,20 @@
    //   alert('oldcounter'+oldcounter);
    //   alert('sum'+sum);
       if (sum.toString().length < 6){
-    //    insert(sum,'0')
         if(sum.toString().length == 5){
-          $('.counter').text(sum.prepend('0'));
+          sum = '0'+sum;
         }else if(sum.toString().length == 4){
-          $('.counter').text(sum.prepend('00'));
+          sum = '00'+sum;
         }else if(sum.toString().length == 3){
-          alert(sum);
-          alert('000'+sum);
-          $('.counter').text('000'+sum);
+           sum = '000'+sum;
         }else if(sum.toString().length == 2){
-          $('.counter').text(sum.prepend('0000'));
+          sum = '0000'+sum;
         }else if(sum.toString().length == 1){
-          $('.counter').text(sum.prepend('00000'));
+          sum = '00000'+sum;
         }
+        $('.counter').text(sum);
       }else{
+         sum = sum;
         $('.counter').text(sum);
       }
 
