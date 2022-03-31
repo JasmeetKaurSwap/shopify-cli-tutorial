@@ -94,6 +94,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function(){
+    function addStr(str, index, stringToAdd){
+      return str.substring(0, index) + stringToAdd + str.substring(index, str.length);
+    }
     $('.selector-hidden, input').change(function(){
       var _this = $(this);
       var _thisparent = _this.parent();
@@ -114,8 +117,8 @@
           $('.counter').text(sum.prepend('00'));
         }else if(sum.toString().length == 3){
           alert(sum);
-          alert(strncat(sum, '000', 1));
-          $('.counter').text(sum.prepend(000));
+          alert(addStr(sum, 1, '000'));
+          $('.counter').text(addStr(sum, 1, '000'));
         }else if(sum.toString().length == 2){
           $('.counter').text(sum.prepend('0000'));
         }else if(sum.toString().length == 1){
